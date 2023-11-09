@@ -1,0 +1,4 @@
+# The files won't be in the docker image.
+Dockerfile
+[b|B]in
+[o|O]bj

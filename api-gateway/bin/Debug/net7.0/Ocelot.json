@@ -1,0 +1,55 @@
+{
+    "GloablConfiguration":{
+        "BaseUrl": "http://localhost:5003"
+    },
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/gateway/students",
+            "UpstreamHttpMethod": ["Get"],
+            "DownstreamPathTemplate": "/api/student",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5288
+                }
+            ]
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/students/{id}",
+            "UpstreamHttpMethod": ["Get"],
+            "DownstreamPathTemplate": "/api/student/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5288
+                }
+            ]
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/teachers",
+            "UpstreamHttpMethod": ["Get"],
+            "DownstreamPathTemplate": "/api/teacher",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5016
+                }
+            ]
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/teachers/{id}",
+            "UpstreamHttpMethod": ["Get"],
+            "DownstreamPathTemplate": "/api/teacher/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5016
+                }
+            ]
+        }
+    ]
+}
